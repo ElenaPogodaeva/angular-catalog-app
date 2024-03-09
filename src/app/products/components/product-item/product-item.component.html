@@ -1,0 +1,15 @@
+<mat-card class="card" *ngIf="product">
+  <div mat-card-image class="card__img-container">
+    <div class="card__img-container-inner">
+      <img [src]="product.image" alt="Card image">
+    </div>
+  </div>
+  <h2 class="card__title">{{ product.title }}</h2>
+  <mat-card-content>
+    <p class="card__price">{{ product.price | currency }}</p>
+    <p class="card__rate">
+      <span>{{product.rating}}</span>
+      <mat-icon>star_rate</mat-icon>
+    </p>
+  </mat-card-content>
+</mat-card>

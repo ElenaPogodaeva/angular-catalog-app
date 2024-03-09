@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { responseMock } from './products/models/mocks';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-catalog-app';
+
+  products = responseMock;
 }

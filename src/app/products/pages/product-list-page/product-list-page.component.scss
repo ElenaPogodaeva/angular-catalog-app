@@ -1,0 +1,35 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__item {
+    width: calc(25% - 20px);
+    min-width: 264px;
+    margin: 10px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .cards__item {
+    width: calc(33.33% - 20px);
+  }
+}
+@media(max-width: 992px) {
+  .cards__item {
+    width: calc(50% - 20px);
+  }
+}
+@media(max-width: 576px) {
+  .cards__item {
+    width: calc(100% - 20px);
+    justify-content: center;
+  }
+}
+
+.no-data {
+  margin-top: 20px;
+  text-align: center;
+}
