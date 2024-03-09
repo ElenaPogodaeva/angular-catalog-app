@@ -7,7 +7,7 @@ import { Product, ProductsResponse } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private readonly PRODUCTS_URL = 'https://dummyjson.com/products';
+  private readonly PRODUCTS_URL = 'products';
 
   private readonly LIMIT = 10;
 
