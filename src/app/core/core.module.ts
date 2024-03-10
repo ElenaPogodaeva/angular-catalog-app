@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -10,7 +11,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 
 @NgModule({
   declarations: [HeaderComponent, NotFoundPageComponent],
-  imports: [CommonModule, ReactiveFormsModule, MatToolbarModule, MatIconModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, MatToolbarModule, MatIconModule],
   exports: [HeaderComponent, NotFoundPageComponent],
   providers: [
     {

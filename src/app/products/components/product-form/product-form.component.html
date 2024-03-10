@@ -1,53 +1,53 @@
 <mat-card>
   <form autocomplete="off" [formGroup]="productForm" (submit)="onSubmit()">
     <mat-form-field>
-      <input matInput formControlName="id" placeholder="{{ 'Id' }}" name="id">
+      <input matInput formControlName="id" placeholder="Id" name="id">
       <mat-error *ngIf="productForm.controls['id'].hasError('required')">
-        <span translate>Please enter a product id</span>
+        Please enter a product id
       </mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput formControlName="title" placeholder="{{ 'Title' }}" name="title">
+      <input matInput formControlName="title" placeholder="Title" name="title">
       <mat-error *ngIf="productForm.controls['title'].hasError('required')">
-        <span translate>Please enter a product title</span>
+        Please enter a product title
       </mat-error>
       <mat-error *ngIf="productForm.controls['title'].hasError('maxlength')">
-        <span translate>Product title is loo long</span>
+        Product title is too long
       </mat-error>
     </mat-form-field>
     <mat-form-field>
-      <textarea matInput formControlName="description" placeholder="{{ 'Description' }}" name="description"></textarea>
+      <textarea matInput formControlName="description" placeholder="Description" name="description"></textarea>
       <mat-error *ngIf="productForm.controls['description'].hasError('required')">
-        <span translate>Please enter a product description</span>
+        Please enter a product description
       </mat-error>
       <mat-error *ngIf="productForm.controls['description'].hasError('maxlength')">
-        <span translate>Product description is loo long</span>
+        Product description is too long
       </mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="number" formControlName="price" placeholder="{{ 'Price' }}" name="price">
+      <input matInput type="number" formControlName="price" placeholder="Price" name="price">
       <mat-error *ngIf="productForm.controls['price'].hasError('required')">
-        <span translate>Please enter a product price</span>
+        Please enter a product price
       </mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="number" formControlName="rating" placeholder="{{ 'Rating' }}" name="rating">
+      <input matInput type="number" formControlName="rating" placeholder="Rating" name="rating">
       <mat-error *ngIf="productForm.controls['rating'].hasError('required')">
-        <span translate>Please enter a product rating</span>
+        Please enter a product rating
       </mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="url" formControlName="thumbnail" placeholder="{{ 'Image URL' }}" name="thumbnail">
+      <input matInput formControlName="thumbnail" placeholder="Image URL" name="thumbnail">
       <mat-error *ngIf="productForm.controls['thumbnail'].hasError('pattern')">
         Image URL is invalid
       </mat-error>
     </mat-form-field>
     <div class="form-actions">
       <button type="submit" mat-raised-button [disabled]="productForm.invalid">
-        <span translate>Save</span>
+        Save
       </button>
       <button type="button" color="warn" mat-raised-button (click)="onCancel(); $event.preventDefault()">
-        <span translate>Cancel</span>
+        Cancel
       </button>
     </div>
   </form>

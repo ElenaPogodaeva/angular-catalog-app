@@ -9,11 +9,11 @@ import { Product, ProductsResponse } from '../models/product.model';
 export class ProductService {
   private readonly PRODUCTS_URL = 'products';
 
-  private readonly LIMIT = 10;
+  private readonly LIMIT = 20;
 
   constructor(private http: HttpClient) {}
 
-  getProducts(page: number): Observable<Product[]> {
+  getProducts(page: number = 0): Observable<Product[]> {
     const params = new HttpParams()
       .set('skip', (page * this.LIMIT).toString())
       .set('limit', this.LIMIT.toString());

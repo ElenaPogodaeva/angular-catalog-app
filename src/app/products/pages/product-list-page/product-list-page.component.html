@@ -2,7 +2,7 @@
   <section class="product-toolbar">
     <button mat-raised-button routerLink="new" color="primary">
       <mat-icon>add</mat-icon>
-      <span translate>Add product</span>
+      <span>Add product</span>
     </button>
   </section>
 
@@ -10,9 +10,6 @@
     <section class="cards" *ngIf="products.length">
       <app-product-item class="cards__item" *ngFor="let product of products" [product]="product">
       </app-product-item>
-      <!-- <button class="course-list__load-more" mat-raised-button *ngIf="hasMoreCourses$ | async" (click)="loadMoreCourses()">
-      <span translate>Load more</span>
-    </button> -->
     </section>
   </ng-container>
 </div>
