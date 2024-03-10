@@ -4,7 +4,9 @@
       <img [src]="product.thumbnail" alt="Card image">
     </div>
   </div>
-  <h2 class="card__title">{{ product.title }}</h2>
+  <a routerLink="/products/{{product.id}}">
+    <h2 class="card__title">{{ product.title }}</h2>
+  </a>
   <mat-card-content>
     <p class="card__price">{{ product.price | currency }}</p>
     <p class="card__rate">
