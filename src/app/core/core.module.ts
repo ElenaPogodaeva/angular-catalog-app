@@ -5,11 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { ApiInterceptor } from './interceptors/api.interceptor';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, NotFoundPageComponent],
   imports: [CommonModule, MatToolbarModule, MatIconModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, NotFoundPageComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
