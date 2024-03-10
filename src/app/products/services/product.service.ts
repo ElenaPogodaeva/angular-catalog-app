@@ -36,4 +36,9 @@ export class ProductService {
       }),
     );
   }
+
+  createProduct(product: Product): Observable<Product> {
+    const url = `${this.PRODUCTS_URL}/add`;
+    return this.http.post<Product>(url, product);
+  }
 }

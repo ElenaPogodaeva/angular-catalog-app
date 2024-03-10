@@ -2,14 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
 import { DetailedPageComponent } from './pages/detailed-page/detailed-page.component';
+import { AddProductPageComponent } from './pages/add-product-page/add-product-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'products',
     component: ProductListPageComponent,
   },
   {
-    path: ':id',
+    path: 'products/new',
+    component: AddProductPageComponent,
+  },
+  {
+    path: 'products/:id',
     component: DetailedPageComponent,
   },
 ];

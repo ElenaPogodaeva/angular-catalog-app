@@ -1,21 +1,18 @@
-<section class="product-toolbar">
-  <div class="product-toolbar__add-product">
+<div class="container">
+  <section class="product-toolbar">
     <button mat-raised-button routerLink="new" color="primary">
       <mat-icon>add</mat-icon>
       <span translate>Add product</span>
     </button>
-  </div>
-</section>
+  </section>
 
-<ng-container *ngIf="products">
-  <section class="cards" *ngIf="products.length">
-    <app-product-item class="cards__item"
-      *ngFor="let product of products"
-      [product]="product"
-    >
-    </app-product-item>
-    <!-- <button class="course-list__load-more" mat-raised-button *ngIf="hasMoreCourses$ | async" (click)="loadMoreCourses()">
+  <ng-container *ngIf="products">
+    <section class="cards" *ngIf="products.length">
+      <app-product-item class="cards__item" *ngFor="let product of products" [product]="product">
+      </app-product-item>
+      <!-- <button class="course-list__load-more" mat-raised-button *ngIf="hasMoreCourses$ | async" (click)="loadMoreCourses()">
       <span translate>Load more</span>
     </button> -->
-  </section>
-</ng-container>
+    </section>
+  </ng-container>
+</div>

@@ -1,9 +1,19 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.product-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 
   &__item {
     width: calc(25% - 20px);
